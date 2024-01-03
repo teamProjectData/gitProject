@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+.boardTimeline main#main {
+	margin-top: 100px;
+	width: 650px;
+}
+
+.boardTimeline div#rowArea {
+	height: 200px;
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+div#rowArea div#userInfoArea div#userWirterArea span {
+	display: block;
+}
+
+
+div#writeArea {
+	height: 200px;
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+div#writeArea textarea {
+	width: 100%;
+	height: 100px;
+	resize: none;
+	outline: none;
+/* 	border: none; */
+	padding-left: 10px;
+}

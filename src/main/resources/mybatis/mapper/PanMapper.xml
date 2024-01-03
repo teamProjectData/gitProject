@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+	<mapper namespace="com.example.demo.dao.PanDao">
+<!-- 		<insert id="mtdInsert"> -->
+<!-- 			insert into applicant (name, phone, skill, motive) -->
+<!-- 			values (#{item1},#{item2},#{item3},#{item4}) -->
+<!-- 		</insert> -->
+
+		<!-- 강아지게시판 초기화면 -->
+		<select id="mtdListView" resultType="com.example.demo.dto.PanDto">
+			select * from pan_tbl where category='dog' order by num desc limit 0,5
+		</select>
+		
+		<!-- 스크롤이벤트시 추가 게시글-->
+		<select id="mtdListViewPlus" resultType="com.example.demo.dto.PanDto">
+			select * from pan_tbl where category='dog' order by num desc limit ${param1},${param2}
+		</select>
+		
+		
+		
+<!-- 		<select id="mtdMoreInfo" resultType="com.qd11.Dto.JobManagerDto"> -->
+<!-- 			select * from applicant where num=#{param1} -->
+<!-- 		</select> -->
+		
+<!-- 		<update id="mtdUpdate"> -->
+<!-- 			update applicant set phone=#{item1}, skill=#{item2}, motive=#{item3} where num=#{item4}  -->
+<!-- 		</update> -->
+	</mapper>
